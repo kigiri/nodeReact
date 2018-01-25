@@ -45,7 +45,7 @@ const Gifts = {
   notify: async () => mailer.sendMail({
     from: `Le Père Noel 🎅 <santa@${process.env.MAILGUN_DOMAIN}>`, // sender address
     subject: "🎄Votre liste de souhaits 🎁", // Subject line
-    to: 'le.mikmac@gmail.com',
+    to: 'florian@wildcodeschool.fr',
     text: (await readGifts())
         .map(gift => gift.name)
         .join('\n'),
